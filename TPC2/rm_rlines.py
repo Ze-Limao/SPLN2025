@@ -10,7 +10,7 @@ def remove_repeated_lines(input_lines, spaces, comment):
             stripline = line.strip()
         if stripline not in seen:
             if comment and stripline == '':
-                unique_lines.append('#\n')
+                unique_lines.append('#' + line)
             else:
                 unique_lines.append(line)
                 seen.add(stripline)
